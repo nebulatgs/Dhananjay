@@ -88,4 +88,4 @@ const app = express();`
 
 **If You Need Emoji's Join [Gipsy Server](https://dsc.gg/gipsy) And Go To Invite Bot Section Or You Can Just Change Emotes**
 
-**[Click Here For Replit](https://replit.com/@DhananjayEfx/Dhananjay#config.json)
+**[Click Here For Replit](https://replit.com/@DhananjayEfx/Dhananjay#config.json)**

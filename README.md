@@ -83,3 +83,7 @@ const app = express();`
 # **`Update's`**
 
 **Whenever I Add A New Command I Will Update This Code In Git And / Replit**
+
+# `Emojis`
+
+**If You Need Emoji's Join [Gipsy Server](https://dsc.gg/gipsy) And Go To Invite Bot Section Or You Can Just Change Emotes**

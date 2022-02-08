@@ -20,9 +20,9 @@ module.exports = {
  .setURL(message.author.displayAvatarURL({ size: 4096, dynamic: true, format: "webp"}), true)
  .setStyle("LINK")
  );
- let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
+ const user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
 
- let embed = new MessageEmbed()
+ const embed = new MessageEmbed()
  .setAuthor(`${user.username}'s Avatar`, message.author.displayAvatarURL())
 
  .addField('PNG', `\n[\`LINK\`](${user.displayAvatarURL({ size: 4096, dynamic: true, format: "png" })})`, true, true)

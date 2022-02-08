@@ -104,34 +104,34 @@ module.exports = {
         })
 
         collector.on("collect", async (interaction) => {
-            if (interaction.customId === "y") {
-                await aki.step(0)
-            }
-            if (interaction.customId === "n") {
-                await aki.step(1)
-            }
-            if (interaction.customId === "idk") {
-                await aki.step(2)
-            }
-            if (interaction.customId === "pb") {
-                await aki.step(3)
-            }
-            if (interaction.customId === "pn") {
-                await aki.step(4)
-            }
-            if (interaction.customId === "stop") {
-
-                row1.components[0].setDisabled(true)
-                row1.components[1].setDisabled(true)
-                row1.components[2].setDisabled(true)
-                row2.components[0].setDisabled(true)
-                row2.components[1].setDisabled(true)
-                row2.components[2].setDisabled(true)
-
-                await startMessage.edit({ content: "This game has been stopped", components: [row1, row2] })
-
-                collector.stop()
-                isPlaying.delete(message.author.id)
+            switch (interaction.customId) {
+                case "y":
+                    await aki.step(0)
+                    break;
+                case "n":
+                    await aki.step(1);
+                    break;                    
+                case "idk":
+                    await aki.step(2);
+                    break;                    
+                case "pb":
+                    await aki.step(3);
+                    break;                    
+                case "pn":
+                    await aki.step(4);
+                    break;
+                case "stop":
+                    row1.components[0].setDisabled(true)
+                    row1.components[1].setDisabled(true)
+                    row1.components[2].setDisabled(true)
+                    row2.components[0].setDisabled(true)
+                    row2.components[1].setDisabled(true)
+                    row2.components[2].setDisabled(true)
+    
+                    await startMessage.edit({ content: "This game has been stopped", components: [row1, row2] })
+    
+                    collector.stop()
+                    isPlaying.delete(message.author.id)
             }
 
             if (aki.progress >= 90 || aki.currentStep >= 48) {

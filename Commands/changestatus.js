@@ -9,7 +9,7 @@ module.exports = {
       if(message.author.id !== `767627938433597450`) {
         return message.channel.send("sorry, this command is only for the developer")
       }
-      let content = args.join(' ').split(' | ')
+      const content = args.join(' ').split(' | ')
       if(!content[0]) {
         return message.channel.send(`:x: | Provide something to change my status to!`)
       }
@@ -23,7 +23,7 @@ module.exports = {
       status: `${content[2]}`
     })
     await message.react(`✅`)
-    let embed = new MessageEmbed()
+    const embed = new MessageEmbed()
     .setTitle(`Status Changed`)
     .setDescription(
       `

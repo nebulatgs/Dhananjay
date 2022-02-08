@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const colors = require("colors");
 const fs = require('fs');
-const prefix = "d!";
 const os = require('os');
 const si = require('systeminformation');
 const config = require('./config.json');
+
+const prefix = "d!";
 
 const client = new Discord.Client({
     intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'],
@@ -39,4 +40,4 @@ client.on('messageCreate', message => {
 
 
 
-client.login(config.token);
+client.login(process.env.TOKEN || config.token);
